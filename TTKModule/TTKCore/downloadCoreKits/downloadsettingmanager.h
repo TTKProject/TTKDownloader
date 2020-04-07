@@ -3,7 +3,7 @@
 
 /* =================================================
  * This file is part of the TTK Downloader project
- * Copyright (C) 2015 - 2019 Greedysky Studio
+ * Copyright (C) 2015 - 2020 Greedysky Studio
 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -138,7 +138,7 @@ protected:
         int index = staticMetaObject.indexOfEnumerator("ConfigType");
         QMetaEnum metaEnum = staticMetaObject.enumerator(index);
         int key = metaEnum.keyToValue(stype.toStdString().c_str());
-        return MStatic_cast(ConfigType, key);
+        return TTKStatic_cast(ConfigType, key);
     }
 
     QVariant m_variant;

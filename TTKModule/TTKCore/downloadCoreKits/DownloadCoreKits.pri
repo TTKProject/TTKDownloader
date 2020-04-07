@@ -1,6 +1,6 @@
 # =================================================
 # * This file is part of the TTK Downloader project
-# * Copyright (C) 2015 - 2019 Greedysky Studio
+# * Copyright (C) 2015 - 2020 Greedysky Studio
 #
 # * This program is free software; you can redistribute it and/or modify
 # * it under the terms of the GNU General Public License as published by
@@ -20,7 +20,7 @@ INCLUDEPATH += $$PWD
 
 !contains(CONFIG, TTK_NO_MSVC_LINK_NEED){
 HEADERS  += \
-    $$PWD/downloadlogger.h \
+    $$PWD/ttklogger.h \
     $$PWD/downloadglobaldefine.h \
     $$PWD/downloadobject.h \
     $$PWD/downloadnumberdefine.h \

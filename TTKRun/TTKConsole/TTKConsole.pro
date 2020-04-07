@@ -1,6 +1,6 @@
 # =================================================
 # * This file is part of the TTK Downloader project
-# * Copyright (C) 2015 - 2019 Greedysky Studio
+# * Copyright (C) 2015 - 2020 Greedysky Studio
 #
 # * This program is free software; you can redistribute it and/or modify
 # * it under the terms of the GNU General Public License as published by
@@ -67,9 +67,9 @@ SOURCES += \
     downloadconsoleobject.cpp
 
 HEADERS += \
+    ../../TTKModule/TTKCore/downloadCoreKits/ttklogger.h \
     ../../TTKModule/TTKCore/downloadCoreKits/downloadsettingmanager.h \
     ../../TTKModule/TTKCore/downloadCoreKits/downloadabstractxml.h \
-    ../../TTKModule/TTKCore/downloadCoreKits/downloadlogger.h \
     ../../TTKModule/TTKCore/downloadCoreKits/downloadobject.h \
     ../../TTKModule/TTKCore/downloadCoreKits/downloadglobaldefine.h \
     ../../TTKModule/TTKCore/downloadCoreKits/downloadbreakpointconfigmanager.h \
