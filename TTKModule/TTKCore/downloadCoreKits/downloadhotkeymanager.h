@@ -23,7 +23,7 @@
 
 #define M_HOTKEY_PTR (DownloadSingleton<DownloadHotKeyManager>::createInstance())
 
-class QxtGlobalShortcut;
+class QGlobalShortcut;
 
 /*! @brief The class of the global hotkey setting manager.
  * @author Greedysky <greedysky@163.com>
@@ -31,12 +31,8 @@ class QxtGlobalShortcut;
 class DOWNLOAD_CORE_EXPORT DownloadHotKeyManager : public QObject
 {
     Q_OBJECT
+    TTK_DECLARE_MODULE(DownloadHotKeyManager)
 public:
-    /*!
-     * Get class object name.
-     */
-    static QString getClassName();
-
     /*!
      * To connect parent slot object.
      */
@@ -84,7 +80,7 @@ public:
 
 protected:
 
-    QList<QxtGlobalShortcut*> m_hotkeys;
+    QList<QGlobalShortcut*> m_hotkeys;
 
     DECLARE_SINGLETON_CLASS(DownloadHotKeyManager)
 };

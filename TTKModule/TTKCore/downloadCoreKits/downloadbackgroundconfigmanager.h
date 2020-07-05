@@ -67,16 +67,12 @@ TTK_DECLARE_LISTS(DownloadBackgroundImage)
 class DOWNLOAD_CORE_EXPORT DownloadSkinConfigManager : public DownloadAbstractXml
 {
     Q_OBJECT
+    TTK_DECLARE_MODULE(DownloadSkinConfigManager)
 public:
     /*!
      * Object contsructor.
      */
-    explicit DownloadSkinConfigManager(QObject *parent = 0);
-
-    /*!
-     * Get class object name.
-     */
-    static QString getClassName();
+    explicit DownloadSkinConfigManager(QObject *parent = nullptr);
 
     /*!
      * Write datas into xml file.

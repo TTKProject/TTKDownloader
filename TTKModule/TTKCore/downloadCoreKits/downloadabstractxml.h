@@ -48,18 +48,14 @@ TTK_DECLARE_LISTS(DownloadXmlAttribute)
 class DOWNLOAD_CORE_EXPORT DownloadAbstractXml : public QObject
 {
     Q_OBJECT
+    TTK_DECLARE_MODULE(DownloadAbstractXml)
 public:
     /*!
      * Object contsructor.
      */
-    explicit DownloadAbstractXml(QObject *parent = 0);
+    explicit DownloadAbstractXml(QObject *parent = nullptr);
 
     ~DownloadAbstractXml();
-
-    /*!
-     * Get class object name.
-     */
-    static QString getClassName();
 
     /*!
      * Read datas from xml file by given name.

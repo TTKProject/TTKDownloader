@@ -11,11 +11,6 @@ DownloadSourceThread::~DownloadSourceThread()
     deleteAll();
 }
 
-QString DownloadSourceThread::getClassName()
-{
-    return staticMetaObject.className();
-}
-
 void DownloadSourceThread::startToDownload(const QString &url)
 {
     m_manager = new QNetworkAccessManager(this);
@@ -32,7 +27,7 @@ void DownloadSourceThread::startToDownload(const QString &url)
     request.setSslConfiguration(sslConfig);
 #endif
 
-    m_reply = m_manager->get( request );
+    m_reply = m_manager->get(request);
     connect(m_reply, SIGNAL(finished()), SLOT(downLoadFinished()));
 }
 

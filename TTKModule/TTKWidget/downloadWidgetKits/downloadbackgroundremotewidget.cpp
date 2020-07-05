@@ -22,7 +22,7 @@ DownloadBackgroundRemoteWidget::DownloadBackgroundRemoteWidget(QWidget *parent)
     m_functionsWidget = nullptr;
     m_queryThread = nullptr;
 
-    m_downloadQueue = new DownloadQueueCache(DownLoadThreadAbstract::Download_BigBG, this);
+    m_downloadQueue = new DownloadQueueCache(this);
     connect(m_downloadQueue, SIGNAL(downLoadDataChanged(QString)), SLOT(downLoadDataChanged(QString)));
     connect(m_listWidget, SIGNAL(itemClicked(QString)), parent, SLOT(remoteBackgroundListWidgetItemClicked(QString)));
 }
@@ -34,11 +34,6 @@ DownloadBackgroundRemoteWidget::~DownloadBackgroundRemoteWidget()
     delete m_functionsWidget;
     delete m_downloadQueue;
     delete m_queryThread;
-}
-
-QString DownloadBackgroundRemoteWidget::getClassName()
-{
-    return staticMetaObject.className();
 }
 
 void DownloadBackgroundRemoteWidget::init()
@@ -150,7 +145,7 @@ void DownloadBackgroundRemoteWidget::buttonClicked(int index)
     buttonStyleChanged();
 
     QDir dir(".");
-    dir.mkpath( QString("%1%2").arg(CACHE_DIR_FULL).arg(index) );
+    dir.mkpath(QString("%1%2").arg(CACHE_DIR_FULL).arg(index));
 
     m_listWidget->clearAllItems();
     DownloadQueueDatas datas;

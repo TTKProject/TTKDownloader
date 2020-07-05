@@ -3,7 +3,6 @@
 
 #include <QDir>
 #include <QMap>
-#include <QDebug>
 #include <QFileInfo>
 #include <functional>
 #ifdef TTK_GREATER_NEW
@@ -38,7 +37,7 @@ void CodeLinesTest::codeLines()
     int fileCount = 0, lineCount = 0;
 
     QString currentPath = "../";
-    if( currentPath.isEmpty() )
+    if(currentPath.isEmpty())
     {
         return;
     }
@@ -50,9 +49,9 @@ void CodeLinesTest::codeLines()
     QMap<QString, int> categorys;
 
     QEventLoop eventLoop;
-    QtConcurrent::run( [&]()
+    QtConcurrent::run([&]()
     {
-        foreachFileFromDirectory( { currentPath }, [&](const QFileInfo &info)
+        foreachFileFromDirectory({ currentPath }, [&](const QFileInfo &info)
         {
             QString suffix = info.suffix().toLower();
             if(suffix.isEmpty())
@@ -83,7 +82,7 @@ void CodeLinesTest::codeLines()
         }, true);
 
         eventLoop.quit();
-    } );
+    });
     eventLoop.exec();
 
     qDebug() << "All File Count " << fileCount;

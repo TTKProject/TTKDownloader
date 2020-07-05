@@ -31,18 +31,14 @@ class DownloadNewFileDialog;
 class DOWNLOAD_WIDGET_EXPORT DownloadNewFileDialog : public DownloadAbstractMoveDialog
 {
     Q_OBJECT
+    TTK_DECLARE_MODULE(DownloadNewFileDialog)
 public:
     /*!
      * Object contsructor.
      */
-    explicit DownloadNewFileDialog(QWidget *parent = 0);
+    explicit DownloadNewFileDialog(QWidget *parent = nullptr);
 
     ~DownloadNewFileDialog();
-
-    /*!
-     * Get class object name.
-     */
-    static QString getClassName();
 
 Q_SIGNALS:
     /*!

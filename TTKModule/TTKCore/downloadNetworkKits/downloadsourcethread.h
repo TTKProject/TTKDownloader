@@ -27,18 +27,15 @@
 class DOWNLOAD_NETWORK_EXPORT DownloadSourceThread : public DownloadNetworkAbstract
 {
     Q_OBJECT
+    TTK_DECLARE_MODULE(DownloadSourceThread)
 public:
     /*!
      * Object contsructor.
      */
-    explicit DownloadSourceThread(QObject *parent = 0);
+    explicit DownloadSourceThread(QObject *parent = nullptr);
 
     ~DownloadSourceThread();
 
-    /*!
-     * Get class object name.
-     */
-    static QString getClassName();
     /*!
      * Start to download data.
      */

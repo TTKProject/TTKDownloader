@@ -27,18 +27,14 @@
 class DOWNLOAD_REMOTE_EXPORT DownloadRemoteWidget : public DownloadAbstractMoveWidget
 {
     Q_OBJECT
+    TTK_DECLARE_MODULE(DownloadRemoteWidget)
 public:
     /*!
      * Object contsructor.
      */
-    explicit DownloadRemoteWidget(QWidget *parent = 0);
+    explicit DownloadRemoteWidget(QWidget *parent = nullptr);
 
     virtual ~DownloadRemoteWidget();
-
-    /*!
-     * Get class object name.
-     */
-    static QString getClassName();
 
 public Q_SLOTS:
     /*!

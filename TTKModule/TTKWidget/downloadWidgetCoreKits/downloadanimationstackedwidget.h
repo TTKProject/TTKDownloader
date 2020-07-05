@@ -30,6 +30,7 @@
 class DOWNLOAD_WIDGET_EXPORT DownloadAnimationStackedWidget : public QStackedWidget
 {
     Q_OBJECT
+    TTK_DECLARE_MODULE(DownloadAnimationStackedWidget)
 public:
     enum AnimationType
     {
@@ -42,14 +43,9 @@ public:
     /*!
      * Object contsructor.
      */
-    explicit DownloadAnimationStackedWidget(QWidget *parent = 0);
+    explicit DownloadAnimationStackedWidget(QWidget *parent = nullptr);
 
     virtual ~DownloadAnimationStackedWidget();
-
-    /*!
-     * Get class object name.
-     */
-    static QString getClassName();
 
     /*!
      * Start to anmiation by index.

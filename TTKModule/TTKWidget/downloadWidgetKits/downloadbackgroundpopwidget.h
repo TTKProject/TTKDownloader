@@ -29,18 +29,14 @@ class DownloadClickedSlider;
 class DOWNLOAD_WIDGET_EXPORT DownloadBackgroundPopWidget : public DownloadToolMenuWidget
 {
     Q_OBJECT
+    TTK_DECLARE_MODULE(DownloadBackgroundPopWidget)
 public:
     /*!
      * Object contsructor.
      */
-    explicit DownloadBackgroundPopWidget(QWidget *parent = 0);
+    explicit DownloadBackgroundPopWidget(QWidget *parent = nullptr);
 
     virtual ~DownloadBackgroundPopWidget();
-
-    /*!
-     * Get class object name.
-     */
-    static QString getClassName();
 
     /*!
      * Set slider value.

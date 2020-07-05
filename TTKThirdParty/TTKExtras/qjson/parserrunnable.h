@@ -21,7 +21,6 @@
 #ifndef PARSERRUNNABLE_H
 #define PARSERRUNNABLE_H
 
-#include "ttkprivate.h"
 #include "downloadextrasglobaldefine.h"
 
 #include <QtCore/QObject>
@@ -39,7 +38,7 @@ namespace QJson {
   {
     Q_OBJECT
     public:
-      explicit ParserRunnable(QObject* parent = 0);
+      explicit ParserRunnable(QObject* parent = nullptr);
 
       void setData( const QByteArray& data );
 

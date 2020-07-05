@@ -6,11 +6,6 @@ DownloadBreakPointConfigManager::DownloadBreakPointConfigManager(QObject *parent
 
 }
 
-QString DownloadBreakPointConfigManager::getClassName()
-{
-    return staticMetaObject.className();
-}
-
 void DownloadBreakPointConfigManager::writeBreakPointConfig(const DownloadBreakPointItems &records)
 {
     ///////////////////////////////////////////////////////
@@ -28,7 +23,7 @@ void DownloadBreakPointConfigManager::writeBreakPointConfig(const DownloadBreakP
         writeDomElementMutil(download, "value", DownloadXmlAttributes() <<
                                                 DownloadXmlAttribute("start", record.m_start) <<
                                                 DownloadXmlAttribute("end", record.m_end) <<
-                                                DownloadXmlAttribute("ready", record.m_ready) );
+                                                DownloadXmlAttribute("ready", record.m_ready));
     }
 
     //Write to file

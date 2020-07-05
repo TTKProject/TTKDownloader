@@ -20,7 +20,6 @@
  ================================================= */
 
 #include <QApplication>
-#include "ttkprivate.h"
 #include "downloadrunglobaldefine.h"
 
 class TTKRunApplicationPrivate;
@@ -41,7 +40,7 @@ public:
     */
     TTKRunApplication(const QString &id, int &argc, char **argv);
 
-#if QT_VERSION < 0x050000
+#ifndef TTK_GREATER_NEW
     /*!
      * Object contsructor.
     */

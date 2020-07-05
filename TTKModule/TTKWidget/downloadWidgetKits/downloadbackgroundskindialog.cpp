@@ -89,11 +89,6 @@ DownloadBackgroundSkinDialog::~DownloadBackgroundSkinDialog()
     delete m_remoteBackgroundList;
 }
 
-QString DownloadBackgroundSkinDialog::getClassName()
-{
-    return staticMetaObject.className();
-}
-
 QPixmap DownloadBackgroundSkinDialog::setMBackground(QString &name)
 {
     QString path = USER_THEME_DIR_FULL + name + TTS_FILE;
@@ -168,7 +163,7 @@ void DownloadBackgroundSkinDialog::showPaletteDialog()
 
 void DownloadBackgroundSkinDialog::showPaletteDialog(const QString &path)
 {
-    cpoyFileFromLocal( path );
+    cpoyFileFromLocal(path);
     m_myBackgroundList->updateLastedItem();
 }
 
@@ -179,7 +174,7 @@ void DownloadBackgroundSkinDialog::showCustomSkinDialog()
     {
         return;
     }
-    cpoyFileFromLocal( customSkinPath );
+    cpoyFileFromLocal(customSkinPath);
     m_myBackgroundList->updateLastedItem();
 }
 

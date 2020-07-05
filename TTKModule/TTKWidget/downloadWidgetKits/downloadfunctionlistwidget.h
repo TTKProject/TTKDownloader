@@ -28,16 +28,13 @@
 class DOWNLOAD_WIDGET_EXPORT DownloadFunctionItemWidget : public QWidget
 {
     Q_OBJECT
+    TTK_DECLARE_MODULE(DownloadFunctionItemWidget)
 public:
     /*!
      * Object contsructor.
      */
-    explicit DownloadFunctionItemWidget(QWidget *parent = 0);
+    explicit DownloadFunctionItemWidget(QWidget *parent = nullptr);
 
-    /*!
-     * Get class object name.
-     */
-    static QString getClassName();
     /*!
      * Set label text.
      */
@@ -81,18 +78,15 @@ protected:
 class DOWNLOAD_WIDGET_EXPORT DownloadFunctionListWidget : public QWidget
 {
     Q_OBJECT
+    TTK_DECLARE_MODULE(DownloadFunctionListWidget)
 public:
     /*!
      * Object contsructor.
      */
-    explicit DownloadFunctionListWidget(QWidget *parent = 0);
+    explicit DownloadFunctionListWidget(QWidget *parent = nullptr);
 
     ~DownloadFunctionListWidget();
 
-    /*!
-     * Get class object name.
-     */
-    static QString getClassName();
     /*!
      * Resize mode.
      */

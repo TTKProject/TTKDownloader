@@ -27,11 +27,6 @@ DownloadRemoteWidget::~DownloadRemoteWidget()
     M_SETTING_PTR->setValue(DownloadSettingManager::SkinSuspensionChoiced, false);
 }
 
-QString DownloadRemoteWidget::getClassName()
-{
-    return staticMetaObject.className();
-}
-
 void DownloadRemoteWidget::setValue(int value)
 {
     if(value > 100) value = 100;
@@ -67,7 +62,7 @@ void DownloadRemoteWidget::contextMenuEvent(QContextMenuEvent *event)
     bool ishow = M_SETTING_PTR->value(DownloadSettingManager::SkinSuspensionChoiced).toBool();
     DownloadTopAreaWidget *tw = DownloadTopAreaWidget::instance();
     QMenu floatMenu(tr("FloatSetting"), &menu);
-    floatMenu.addAction(QIcon( ishow ? ":/contextMenu/lb_selected" : QString()), tr("Show"), tw, SLOT(showRemoteSpeedWidget()));
+    floatMenu.addAction(QIcon(ishow ? ":/contextMenu/lb_selected" : QString()), tr("Show"), tw, SLOT(showRemoteSpeedWidget()));
     floatMenu.addAction(QIcon(!ishow ? ":/contextMenu/lb_selected" : QString()), tr("Hide"), tw, SLOT(closeRemoteSpeedWidget()));
     menu.addMenu(&floatMenu);
 

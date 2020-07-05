@@ -35,11 +35,12 @@ namespace Ui {
 class DOWNLOAD_GUI_EXPORT DownloadRightAreaWidget : public QWidget
 {
     Q_OBJECT
+    TTK_DECLARE_MODULE(DownloadRightAreaWidget)
 public:
     /*!
      * Object contsructor.
      */
-    explicit DownloadRightAreaWidget(QWidget *parent = 0);
+    explicit DownloadRightAreaWidget(QWidget *parent = nullptr);
 
     ~DownloadRightAreaWidget();
 
@@ -47,10 +48,7 @@ public:
      * Init widget.
      */
     void init();
-    /*!
-     * Get class object name.
-     */
-    static QString getClassName();
+
     /*!
      * Get class object instance.
      */

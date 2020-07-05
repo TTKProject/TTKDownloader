@@ -6,14 +6,9 @@ DownloadListConfigManager::DownloadListConfigManager(QObject *parent)
 
 }
 
-QString DownloadListConfigManager::getClassName()
-{
-    return staticMetaObject.className();
-}
-
 void DownloadListConfigManager::writeListConfig(const DownloadLists &records)
 {
-    if( !writeConfig(LISTPATH_FULL) )
+    if(!writeConfig(LISTPATH_FULL))
     {
         return;
     }

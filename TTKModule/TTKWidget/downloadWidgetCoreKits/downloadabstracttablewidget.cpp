@@ -20,7 +20,7 @@ DownloadAbstractTableWidget::DownloadAbstractTableWidget(QWidget *parent)
     setMouseTracking(true);  //Open the capture mouse function
     setStyleSheet(DownloadUIObject::MTableWidgetStyle01 + \
                   DownloadUIObject::MScrollBarStyle03 + \
-                  DownloadUIObject::MLineEditStyle01 );
+                  DownloadUIObject::MLineEditStyle01);
 
     QFont f = font();
     f.setBold(false);
@@ -47,11 +47,6 @@ DownloadAbstractTableWidget::DownloadAbstractTableWidget(QWidget *parent)
 DownloadAbstractTableWidget::~DownloadAbstractTableWidget()
 {
 
-}
-
-QString DownloadAbstractTableWidget::getClassName()
-{
-    return staticMetaObject.className();
 }
 
 void DownloadAbstractTableWidget::clear()

@@ -19,7 +19,6 @@
  * with this program; If not, see <http://www.gnu.org/licenses/>.
  ================================================= */
 
-#include <QDebug>
 #include "downloadobject.h"
 #include "ttkversion.h"
 #include "downloadrunglobaldefine.h"
@@ -63,7 +62,7 @@ public:
     /*!
      * Object contsructor.
      */
-    explicit DownloadInitObject(QObject *parent = 0);
+    explicit DownloadInitObject(QObject *parent = nullptr);
 
     /*!
      * Check current setting file's validation.

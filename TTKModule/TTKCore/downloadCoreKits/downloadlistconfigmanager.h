@@ -37,16 +37,12 @@ TTK_DECLARE_LISTS(DownloadList)
 class DOWNLOAD_CORE_EXPORT DownloadListConfigManager : public DownloadAbstractXml
 {
     Q_OBJECT
+    TTK_DECLARE_MODULE(DownloadListConfigManager)
 public:
     /*!
      * Object contsructor.
      */
-    explicit DownloadListConfigManager(QObject *parent = 0);
-
-    /*!
-     * Get class object name.
-     */
-    static QString getClassName();
+    explicit DownloadListConfigManager(QObject *parent = nullptr);
 
     /*!
      * Read list download datas from xml file by given name.

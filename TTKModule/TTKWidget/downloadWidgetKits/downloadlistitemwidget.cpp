@@ -87,11 +87,6 @@ DownloadListItemWidget::~DownloadListItemWidget()
     delete m_stateLabel;
 }
 
-QString DownloadListItemWidget::getClassName()
-{
-    return staticMetaObject.className();
-}
-
 float DownloadListItemWidget::getPercent() const
 {
     if(m_progressBar->maximum() <= 0)
@@ -153,7 +148,7 @@ void DownloadListItemWidget::updateDownloadSpeed()
     m_previousSize = m_progressBar->value();
     m_speedLabel->setText(DownloadUtils::Number::speed2Label(delta));
 
-    m_speedTimeLabel->setText( delta == 0 ? LABEL_MAX_TIME :
+    m_speedTimeLabel->setText(delta == 0 ? LABEL_MAX_TIME :
                              timeStandardization((m_totalSize - m_previousSize)/delta + 1));
 }
 

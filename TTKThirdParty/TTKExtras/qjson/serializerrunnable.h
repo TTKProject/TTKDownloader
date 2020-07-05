@@ -21,7 +21,6 @@
 #ifndef SERIALIZERRUNNABLE_H
 #define SERIALIZERRUNNABLE_H
 
-#include "ttkprivate.h"
 #include "downloadextrasglobaldefine.h"
 
 #include <QtCore/QObject>
@@ -41,7 +40,7 @@ namespace QJson {
   {
     Q_OBJECT
     public:
-      explicit SerializerRunnable(QObject* parent = 0);
+      explicit SerializerRunnable(QObject* parent = nullptr);
 
       /**
        * Sets the json object to serialize.

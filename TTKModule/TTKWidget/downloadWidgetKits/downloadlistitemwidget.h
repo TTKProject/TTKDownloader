@@ -32,18 +32,15 @@ class QProgressBar;
 class DOWNLOAD_WIDGET_EXPORT DownloadListItemWidget : public QWidget
 {
     Q_OBJECT
+    TTK_DECLARE_MODULE(DownloadListItemWidget)
 public:
     /*!
      * Object contsructor.
      */
-    explicit DownloadListItemWidget(QWidget *parent = 0);
+    explicit DownloadListItemWidget(QWidget *parent = nullptr);
 
     ~DownloadListItemWidget();
 
-    /*!
-     * Get class object name.
-     */
-    static QString getClassName();
     /*!
      * Get progress bar percent.
      */

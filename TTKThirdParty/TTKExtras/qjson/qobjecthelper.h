@@ -21,7 +21,6 @@
 #ifndef QOBJECTHELPER_H
 #define QOBJECTHELPER_H
 
-#include "ttkprivate.h"
 #include "downloadextrasglobaldefine.h"
 
 #include <QtCore/QLatin1String>
@@ -52,7 +51,7 @@ namespace QJson {
       Q_ENUMS(Gender)
 
      public:
-        Person(QObject* parent = 0);
+        Person(QObject* parent = nullptr);
         ~Person();
 
         QString name() const;

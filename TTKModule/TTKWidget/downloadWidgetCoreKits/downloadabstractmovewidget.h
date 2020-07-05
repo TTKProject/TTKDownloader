@@ -29,22 +29,19 @@
 class DOWNLOAD_WIDGET_EXPORT DownloadAbstractMoveWidget : public QWidget
 {
     Q_OBJECT
+    TTK_DECLARE_MODULE(DownloadAbstractMoveWidget)
 public:
     /*!
      * Object contsructor.
      */
-    explicit DownloadAbstractMoveWidget(QWidget *parent = 0);
+    explicit DownloadAbstractMoveWidget(QWidget *parent = nullptr);
     /*!
      * Object contsructor.
      */
-    explicit DownloadAbstractMoveWidget(bool transparent, QWidget *parent = 0);
+    explicit DownloadAbstractMoveWidget(bool transparent, QWidget *parent = nullptr);
 
     virtual ~DownloadAbstractMoveWidget();
 
-    /*!
-     * Get class object name.
-     */
-    static QString getClassName();
     /*!
      * Set or not draw window bound shadow.
      */
@@ -91,22 +88,18 @@ protected:
 class DOWNLOAD_WIDGET_EXPORT DownloadAbstractMoveSingleWidget : public DownloadAbstractMoveWidget
 {
     Q_OBJECT
+    TTK_DECLARE_MODULE(DownloadAbstractMoveSingleWidget)
 public:
     /*!
      * Object contsructor.
      */
-    explicit DownloadAbstractMoveSingleWidget(QWidget *parent = 0);
+    explicit DownloadAbstractMoveSingleWidget(QWidget *parent = nullptr);
     /*!
      * Object contsructor.
      */
-    explicit DownloadAbstractMoveSingleWidget(bool transparent, QWidget *parent = 0);
+    explicit DownloadAbstractMoveSingleWidget(bool transparent, QWidget *parent = nullptr);
 
     virtual ~DownloadAbstractMoveSingleWidget();
-
-    /*!
-     * Get class object name.
-     */
-    static QString getClassName();
 
 protected:
     QWidget *m_container;

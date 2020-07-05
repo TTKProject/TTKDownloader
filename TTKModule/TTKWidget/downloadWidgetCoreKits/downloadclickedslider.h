@@ -28,17 +28,13 @@
 class DOWNLOAD_WIDGET_EXPORT DownloadClickedSlider : public QSlider
 {
     Q_OBJECT
+    TTK_DECLARE_MODULE(DownloadClickedSlider)
 public:
     /*!
      * Object contsructor.
      */
-    explicit DownloadClickedSlider(QWidget *parent = 0);
-    explicit DownloadClickedSlider(Qt::Orientation orientation, QWidget *parent = 0);
-
-    /*!
-     * Get class object name.
-     */
-    static QString getClassName();
+    explicit DownloadClickedSlider(QWidget *parent = nullptr);
+    explicit DownloadClickedSlider(Qt::Orientation orientation, QWidget *parent = nullptr);
 
 protected:
     /*!

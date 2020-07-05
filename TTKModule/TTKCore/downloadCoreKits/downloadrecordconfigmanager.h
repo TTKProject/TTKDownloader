@@ -39,16 +39,12 @@ TTK_DECLARE_LISTS(DownloadRecord)
 class DOWNLOAD_CORE_EXPORT DownloadRecordConfigManager : public DownloadAbstractXml
 {
     Q_OBJECT
+    TTK_DECLARE_MODULE(DownloadRecordConfigManager)
 public:
     /*!
      * Object contsructor.
      */
-    explicit DownloadRecordConfigManager(QObject *parent = 0);
-
-    /*!
-     * Get class object name.
-     */
-    static QString getClassName();
+    explicit DownloadRecordConfigManager(QObject *parent = nullptr);
 
     /*!
      * Read history download datas from xml file by given name.

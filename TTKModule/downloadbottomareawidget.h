@@ -38,18 +38,15 @@ namespace Ui {
 class DOWNLOAD_GUI_EXPORT DownloadBottomAreaWidget : public QWidget
 {
     Q_OBJECT
+    TTK_DECLARE_MODULE(DownloadBottomAreaWidget)
 public:
     /*!
      * Object contsructor.
      */
-    explicit DownloadBottomAreaWidget(QWidget *parent = 0);
+    explicit DownloadBottomAreaWidget(QWidget *parent = nullptr);
 
     ~DownloadBottomAreaWidget();
 
-    /*!
-     * Get class object name.
-     */
-    static QString getClassName();
     /*!
      * Get class object instance.
      */

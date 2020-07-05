@@ -28,18 +28,14 @@
 class DOWNLOAD_WIDGET_EXPORT DownloadSystemTrayMenu : public QMenu
 {
     Q_OBJECT
+    TTK_DECLARE_MODULE(DownloadSystemTrayMenu)
 public:
     /*!
      * Object contsructor.
      */
-    explicit DownloadSystemTrayMenu(QWidget *parent = 0);
+    explicit DownloadSystemTrayMenu(QWidget *parent = nullptr);
 
     ~DownloadSystemTrayMenu();
-
-    /*!
-     * Get class object name.
-     */
-    static QString getClassName();
 
 protected:
     /*!

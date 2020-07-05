@@ -1,5 +1,5 @@
-#ifndef DOWNLOADCONSOLEOBJECT_H
-#define DOWNLOADCONSOLEOBJECT_H
+#ifndef MINIPROCESS_H
+#define MINIPROCESS_H
 
 /* =================================================
  * This file is part of the TTK Downloader project
@@ -19,40 +19,11 @@
  * with this program; If not, see <http://www.gnu.org/licenses/>.
  ================================================= */
 
-#include <QCoreApplication>
-#include "downloadobject.h"
-#include "downloadrunglobaldefine.h"
+#include "downloadextrasglobaldefine.h"
 
-class DownloadThreadManager;
-
-/*! @brief The class of the download console object.
- * @author Greedysky <greedysky@163.com>
+/*!
+ * Set string to unicode string by format.
  */
-class DOWNLOAD_RUN_EXPORT DownloadConsoleObject : public QObject
-{
-    Q_OBJECT
-public:
-    /*!
-     * Object contsructor.
-     */
-    explicit DownloadConsoleObject(QObject *parent = nullptr);
+DOWNLOAD_EXTRAS_EXPORT void killProcessByName(const QStringList &origin);
 
-    ~DownloadConsoleObject();
-
-    /*!
-     * Init all parameter.
-     */
-    bool init(const QCoreApplication &app);
-
-public Q_SLOTS:
-    /*!
-     * Download progress changed.
-     */
-    void progressChanged(qint64 current, qint64 total);
-
-protected:
-    DownloadThreadManager *m_manager;
-
-};
-
-#endif // DOWNLOADCONSOLEOBJECT_H
+#endif

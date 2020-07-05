@@ -6,15 +6,10 @@ DownloadSkinConfigManager::DownloadSkinConfigManager(QObject *parent)
 
 }
 
-QString DownloadSkinConfigManager::getClassName()
-{
-    return staticMetaObject.className();
-}
-
 void DownloadSkinConfigManager::writeSkinXMLConfig(const DownloadSkinConfigItem &item, const QString &path)
 {
     //Open wirte file
-    if( !writeConfig( path ) )
+    if(!writeConfig(path))
     {
         return;
     }

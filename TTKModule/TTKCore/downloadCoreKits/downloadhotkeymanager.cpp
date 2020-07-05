@@ -1,19 +1,14 @@
 #include "downloadhotkeymanager.h"
-#include "qshortcut/qxtglobalshortcut.h"
+#include "qshortcut/qglobalshortcut.h"
 
 #include <QStringList>
 
-QString DownloadHotKeyManager::getClassName()
-{
-    return staticMetaObject.className();
-}
-
 void DownloadHotKeyManager::connectParentObject(QObject *object, const QString &sn, const char *slot)
 {
-    QxtGlobalShortcut *qxt = new QxtGlobalShortcut(object);
-    connect(qxt, SIGNAL(activated()), object, slot);
+    QGlobalShortcut *hotkey = new QGlobalShortcut(object);
+    connect(hotkey, SIGNAL(activated()), object, slot);
 
-    m_hotkeys << qxt;
+    m_hotkeys << hotkey;
     setHotKey(m_hotkeys.count() - 1, sn);
     setEnabled(m_hotkeys.count() - 1, true);
 }
@@ -65,7 +60,7 @@ bool DownloadHotKeyManager::enabled(int index)
 
 void DownloadHotKeyManager::enabledAll(bool enabled)
 {
-    foreach(QxtGlobalShortcut *key, m_hotkeys)
+    foreach(QGlobalShortcut *key, m_hotkeys)
     {
         key->setEnabled(enabled);
     }
@@ -102,7 +97,7 @@ int DownloadHotKeyManager::count() const
 QStringList DownloadHotKeyManager::getKeys() const
 {
     QStringList keys;
-    foreach(QxtGlobalShortcut *key, m_hotkeys)
+    foreach(QGlobalShortcut *key, m_hotkeys)
     {
         keys << key->shortcut().toString();
     }

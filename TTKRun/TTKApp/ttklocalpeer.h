@@ -19,8 +19,6 @@
  * with this program; If not, see <http://www.gnu.org/licenses/>.
  ================================================= */
 
-#include <QObject>
-#include "ttkprivate.h"
 #include "downloadrunglobaldefine.h"
 
 class TTKLocalPeerPrivate;
@@ -35,7 +33,7 @@ public:
     /*!
      * Object contsructor.
     */
-    explicit TTKLocalPeer(QObject *parent = 0, const QString &appId = QString());
+    explicit TTKLocalPeer(QObject *parent = nullptr, const QString &appId = QString());
 
     /*!
      * Current client is running or not.

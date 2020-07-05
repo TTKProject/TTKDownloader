@@ -42,6 +42,7 @@ struct DOWNLOAD_WIDGET_EXPORT MoveResizeStruct
 class DOWNLOAD_WIDGET_EXPORT DownloadAbstractMoveResizeWidget : public QWidget
 {
     Q_OBJECT
+    TTK_DECLARE_MODULE(DownloadAbstractMoveResizeWidget)
 public:
     enum Direction
     {
@@ -58,12 +59,7 @@ public:
     /*!
      * Object contsructor.
      */
-    explicit DownloadAbstractMoveResizeWidget(QWidget *parent = 0);
-
-    /*!
-     * Get class object name.
-     */
-    static QString getClassName();
+    explicit DownloadAbstractMoveResizeWidget(QWidget *parent = nullptr);
 
 protected:
     /*!

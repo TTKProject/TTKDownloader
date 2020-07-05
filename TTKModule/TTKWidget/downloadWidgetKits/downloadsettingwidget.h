@@ -50,16 +50,13 @@ TTK_DECLARE_LISTS(DownloadFunctionItem)
 class DOWNLOAD_WIDGET_EXPORT DownloadFunctionTableWidget : public DownloadAbstractTableWidget
 {
     Q_OBJECT
+    TTK_DECLARE_MODULE(DownloadFunctionTableWidget)
 public:
     /*!
      * Object contsructor.
      */
-    explicit DownloadFunctionTableWidget(QWidget *parent = 0);
+    explicit DownloadFunctionTableWidget(QWidget *parent = nullptr);
 
-    /*!
-     * Get class object name.
-     */
-    static QString getClassName();
     /*!
      * Add table list items by index and icons and paths.
      */
@@ -93,18 +90,14 @@ protected:
 class DOWNLOAD_WIDGET_EXPORT DownloadSettingWidget : public DownloadAbstractMoveDialog
 {
     Q_OBJECT
+    TTK_DECLARE_MODULE(DownloadSettingWidget)
 public:
     /*!
      * Object contsructor.
      */
-    explicit DownloadSettingWidget(QWidget *parent = 0);
+    explicit DownloadSettingWidget(QWidget *parent = nullptr);
 
     virtual ~DownloadSettingWidget();
-
-    /*!
-     * Get class object name.
-     */
-    static QString getClassName();
 
     /*!
      * Init controller parameter to widget.

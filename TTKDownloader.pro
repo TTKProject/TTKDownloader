@@ -16,7 +16,7 @@
 # * with this program; If not, see <http://www.gnu.org/licenses/>.
 # =================================================
 
-include(TTKVersion.pri)
+include($$PWD/TTKVersion.pri)
 
 TEMPLATE = subdirs
 SUBDIRS = TTKQrc TTKThirdParty TTKModule TTKService TTKRun TTKTest
@@ -48,7 +48,7 @@ unix:{
     !exists($$output):system(mkdir $$output)
 
     system(find TTKLanguage -name *.ts | xargs $$LRELEASE_EXECUTABLE)
-    system(find TTKLanguage -name *.qm | xargs rename -v -f 's/.qm/.ln/' *  )
+    system(find TTKLanguage -name *.qm | xargs rename -v -f 's/.qm/.ln/' *)
     system(for F in TTKLanguage/*.ln ; do mv $F $$output ;done)
 }
 win32:{

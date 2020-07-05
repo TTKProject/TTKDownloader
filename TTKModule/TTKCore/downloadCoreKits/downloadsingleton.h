@@ -30,15 +30,12 @@ template <typename T>
  */
 class DOWNLOAD_CORE_EXPORT DownloadSingleton
 {
+    TTK_DECLARE_MODULE(DownloadSingleton)
 public:
     /*!
      * Get object instance ptr.
      */
     static T* createInstance();
-    /*!
-     * Get class object name.
-     */
-    static QString getClassName();
 
 private:
     /*!
@@ -78,12 +75,6 @@ T* DownloadSingleton<T>::createInstance()
     return m_instance.data();
 }
 
-template<typename T>
-QString DownloadSingleton<T>::getClassName()
-{
-    return "DownloadSingleton";
-}
-
     ////////////////////////////////////////////////////////////////
     ///                                                           //
     ///              Singleton Macro                              //
@@ -92,8 +83,8 @@ QString DownloadSingleton<T>::getClassName()
 
 ////Class that will implement the singleton mode,
 ////must use the macro in it's delare file
-#define DECLARE_SINGLETON_CLASS( Class )             \
-    friend class DownloadSingleton<Class>;              \
+#define DECLARE_SINGLETON_CLASS(Class)             \
+    friend class DownloadSingleton<Class>;         \
     friend struct QScopedPointerDeleter<Class>;
 
 #endif // DOWNLOADSINGLETON

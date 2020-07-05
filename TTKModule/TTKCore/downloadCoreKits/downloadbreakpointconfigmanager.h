@@ -51,16 +51,12 @@ TTK_DECLARE_LISTS(DownloadBreakPointItem)
 class DOWNLOAD_CORE_EXPORT DownloadBreakPointConfigManager : public DownloadAbstractXml
 {
     Q_OBJECT
+    TTK_DECLARE_MODULE(DownloadBreakPointConfigManager)
 public:
     /*!
      * Object contsructor.
      */
-    explicit DownloadBreakPointConfigManager(QObject *parent = 0);
-
-    /*!
-     * Get class object name.
-     */
-    static QString getClassName();
+    explicit DownloadBreakPointConfigManager(QObject *parent = nullptr);
 
     /*!
      * Write datas into xml file.

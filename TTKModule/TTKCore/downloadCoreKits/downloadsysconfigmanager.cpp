@@ -10,11 +10,6 @@ DownloadSysConfigManager::DownloadSysConfigManager(QObject *parent)
 
 }
 
-QString DownloadSysConfigManager::getClassName()
-{
-    return staticMetaObject.className();
-}
-
 void DownloadSysConfigManager::writeXMLConfig()
 {
     QPoint widgetPositionChoiced = M_SETTING_PTR->value(DownloadSettingManager::WidgetPosition).toPoint();
@@ -47,7 +42,7 @@ void DownloadSysConfigManager::writeXMLConfig()
     ///////////////////////////////////////////////////////////////////////////
 
     //Open wirte file
-    if( !writeConfig(COFIGPATH_FULL) )
+    if(!writeConfig(COFIGPATH_FULL))
     {
         return;
     }

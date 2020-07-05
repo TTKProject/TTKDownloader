@@ -2,6 +2,7 @@
 #include "ui_downloadsettingwidget.h"
 #include "downloadsettingmanager.h"
 
+#include <QButtonGroup>
 #include <QFontDatabase>
 #include <QFileDialog>
 #include <QStyledItemDelegate>
@@ -16,11 +17,6 @@ DownloadFunctionTableWidget::DownloadFunctionTableWidget(QWidget *parent)
 
     setRowCount(3);
     m_listIndex = 0;
-}
-
-QString DownloadFunctionTableWidget::getClassName()
-{
-    return staticMetaObject.className();
 }
 
 void DownloadFunctionTableWidget::addFunctionItems(int index, const DownloadFunctionItems &items)
@@ -47,7 +43,7 @@ void DownloadFunctionTableWidget::listCellClicked(int row, int column)
 {
     Q_UNUSED(column);
     emit currentIndexChanged(row + m_listIndex);
-    selectRow( currentRow() );
+    selectRow(currentRow());
 }
 
 void DownloadFunctionTableWidget::leaveEvent(QEvent *event)
@@ -103,11 +99,6 @@ DownloadSettingWidget::DownloadSettingWidget(QWidget *parent)
 DownloadSettingWidget::~DownloadSettingWidget()
 {
     delete m_ui;
-}
-
-QString DownloadSettingWidget::getClassName()
-{
-    return staticMetaObject.className();
 }
 
 void DownloadSettingWidget::initControllerParameter()

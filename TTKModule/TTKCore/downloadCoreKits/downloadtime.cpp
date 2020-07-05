@@ -28,11 +28,6 @@ DownloadTime::DownloadTime(int day, int hour, int min, int sec, int msec)
     setHMSM(day, hour, min, sec, msec);
 }
 
-QString DownloadTime::getClassName()
-{
-    return "DownloadTime";
-}
-
 void DownloadTime::setHMSM(int day, int hour, int min, int sec, int msec)
 {
     init();
@@ -99,7 +94,7 @@ qint64 DownloadTime::timeStamp(bool ms)
 
 void DownloadTime::timeSRand()
 {
-    qsrand( timeStamp() );
+    qsrand(timeStamp());
 }
 
 QString DownloadTime::msecTime2LabelJustified()
