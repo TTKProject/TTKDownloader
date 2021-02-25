@@ -1,6 +1,6 @@
 # =================================================
 # * This file is part of the TTK Downloader project
-# * Copyright (C) 2015 - 2020 Greedysky Studio
+# * Copyright (C) 2015 - 2021 Greedysky Studio
 #
 # * This program is free software; you can redistribute it and/or modify
 # * it under the terms of the GNU General Public License as published by
@@ -20,10 +20,8 @@ QT       += core gui network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 include($$PWD/../../TTKVersion.pri)
-unix:VERSION += $$TTKDownloader
 
-win32:DESTDIR = $$OUT_PWD/../../bin
-unix:DESTDIR = $$OUT_PWD/../../lib
+DESTDIR = $$OUT_PWD/../../bin
 TARGET = TTKDownloader
 
 TEMPLATE = app

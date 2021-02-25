@@ -1,6 +1,6 @@
 # =================================================
 # * This file is part of the TTK Downloader project
-# * Copyright (C) 2015 - 2020 Greedysky Studio
+# * Copyright (C) 2015 - 2021 Greedysky Studio
 #
 # * This program is free software; you can redistribute it and/or modify
 # * it under the terms of the GNU General Public License as published by
@@ -17,11 +17,10 @@
 # =================================================
 
 QT       += core network xml
-include($$PWD/../../TTKVersion.pri)
-unix:VERSION += 1.0.0.0
 
-win32:DESTDIR = $$OUT_PWD/../../bin
-unix:DESTDIR = $$OUT_PWD/../../lib
+include($$PWD/../../TTKVersion.pri)
+
+DESTDIR = $$OUT_PWD/../../bin
 TARGET = TTKConsole
 
 TEMPLATE = app
@@ -34,8 +33,8 @@ win32:{
     exists($$SSL_DEPANDS):LIBS += -L../../bin/$$TTKDownloader -lssl
 }
 unix:!mac{
-    SSL_DEPANDS = $$OUT_PWD/../../lib/$$TTKDownloader/libssleay32.so
-    exists($$SSL_DEPANDS):LIBS += -L../../lib/$$TTKDownloader -lssl
+    SSL_DEPANDS = $$OUT_PWD/../../bin/$$TTKDownloader/libssleay32.so
+    exists($$SSL_DEPANDS):LIBS += -L../../bin/$$TTKDownloader -lssl
 }
 
 LIBS += -L$$DESTDIR/$$TTKDownloader -lTTKCore
